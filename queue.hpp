@@ -20,7 +20,6 @@ private:
 	static int open;
 public:
 	queue<T>() :current(empty), operationStatus(none) { container = new twoWayList<T>(); open++; };
-	queue<T>(const queue<T>& toCopy) :current(toCopy.current), operationStatus(toCopy.operationStatus) { container = toCopy.container; };
 	~queue<T>() { delete container; open--; };
 	inline unsigned int size() const { return container->get_size(); };
 	inline int opened() const { return open; };
